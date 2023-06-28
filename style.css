@@ -1,0 +1,194 @@
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+@keyframes backgroundHeaderColor {
+  0% {
+    color: white;
+  }
+  100% {
+    background-image: url(/imgs/mountain.jpg);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.scroll-fix::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -30px;
+}
+
+.nav-bar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(7, 7, 7, 0.4509803922);
+  z-index: 100;
+}
+.nav-bar .menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.nav-bar .menu-list li a {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.header {
+  position: relative;
+  top: -49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(/imgs/header.jpg);
+  background-size: cover;
+  background-position: 50% 25%;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  z-index: 10;
+  overflow: hidden;
+}
+.header .title {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px 20px 5px 20px;
+  margin: 18% 5px 10px 5px;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4784313725);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: url(/imgs/mountain.jpg);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-size: cover;
+  --webkit-background-clip: text;
+  color: transparent;
+  animation: backgroundHeaderColor 2.5s;
+}
+.header .underline {
+  width: 10%;
+  height: 1px;
+  margin: 5px auto;
+  background-color: whitesmoke;
+  text-shadow: 0px 0px 2px black;
+}
+.header .subtitle {
+  font-size: 30px;
+  text-align: center;
+  padding: 5px 15px 0 15px;
+  color: rgba(255, 255, 255, 0.7725490196);
+  text-shadow: 2px 2px 2px black;
+}
+.header .hero-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.662745098);
+}
+.header .bouncingArrow {
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  font-size: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #65a2ff;
+  animation: bounce 2s infinite;
+}
+
+.aboutMe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: whitesmoke;
+  margin-top: -49px;
+  height: 100vh;
+  overflow: hidden;
+}
+.aboutMe .authorName {
+  margin-top: 65px;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding: 5px;
+}
+.aboutMe .photo {
+  display: none;
+  position: relative;
+  margin: 0;
+  bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+}
+.aboutMe .photo img {
+  display: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid grey;
+  height: 400px;
+}
+.aboutMe .description-wrapper {
+  display: flex;
+  flex-direction: column;
+  ustify-content: center;
+  align-items: center;
+}
+.aboutMe .description-wrapper .author-description {
+  text-align: justify;
+  padding: 20px 20px 0px 20px;
+}
+
+.highlight {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

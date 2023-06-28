@@ -1,0 +1,169 @@
+@import 'animations.sass'
+    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html
+    scroll-behavior: smooth
+    
+body
+    position: relative
+    font-family: "Montserrat", sans-serif
+
+.scroll-fix::before // scroll-fix for nav
+    content: ''
+    display: block
+    height: 100px
+    margin-top: -30px
+
+
+.nav-bar
+    display: flex
+    position: sticky
+    top: 0
+    width: 100%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 15px
+    background-color: #07070773
+    z-index: 100
+
+    .menu-list
+        display: flex
+        flex-direction: row
+        list-style-type: none
+
+        li
+            // padding: 10px
+
+            a
+                padding: 10px
+                color: white
+                font-weight: bold
+                text-decoration: none
+                font-size: 15px
+                text-transform: uppercase
+
+
+.header
+    position: relative
+    top: -49px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-image: url(/imgs/header.jpg)
+    background-size: cover
+    background-position: 50% 25%
+    background-attachment: fixed
+
+    height: 100vh
+    padding-top: 20px
+    padding-bottom: 40px
+    z-index: 10
+    overflow: hidden
+
+    .title
+        font-size: 50px
+        text-align: center
+        padding: 10px 20px 5px 20px
+        margin: 18% 5px 10px 5px
+        text-shadow: 0px 0px 2px #ffffff7a
+        text-transform: uppercase
+        letter-spacing: 2px
+        background-image: url(/imgs/mountain.jpg)
+        // background-attachment: fixed
+        background-clip: text
+        background-size: cover
+        --webkit-background-clip: text
+        color: transparent
+        animation: backgroundHeaderColor 2.5s
+
+
+    .underline
+        width: 10%
+        height: 1px
+        margin: 5px auto
+        background-color: whitesmoke
+        text-shadow: 0px 0px 2px black
+
+    .subtitle
+        font-size: 30px
+        text-align: center
+        padding: 5px 15px 0 15px
+        color: #ffffffc5
+        text-shadow: 2px 2px 2px black
+            
+    .hero-shadow
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: black
+        z-index: -1
+        background-color:  #000000a9
+
+    .bouncingArrow
+        display: block
+        position: absolute
+        bottom: 25px
+        font-size: 20px
+        left: 50%
+        transform: translate(-50%)
+        color: #65a2ff
+        animation: bounce 2s infinite
+
+.aboutMe
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        background-color: whitesmoke
+        // padding-bottom: 20px
+        margin-top: -49px
+        height: 100vh
+        overflow: hidden
+
+        .authorName
+                margin-top: 65px
+                font-size: 36px
+                font-weight: bold
+                text-transform: uppercase
+                letter-spacing: -2px
+                padding: 5px
+
+        .photo
+            display: none
+            position: relative
+            margin: 0
+            bottom: -10px
+            display: flex
+            flex-direction: column
+            border-radius: 50px
+
+            img
+                display: none
+                position: relative
+                padding: 0
+                margin: 0
+                border-bottom: 2px solid grey
+                height: 400px
+
+        .description-wrapper
+            display: flex
+            flex-direction: column
+            ustify-content: center
+            align-items: center
+
+            .author-description
+                text-align: justify
+                padding: 20px 20px 0px 20px
+
+.highlight
+    font-weight: bold
+
+    
+

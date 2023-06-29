@@ -11,6 +11,11 @@ html
 body
     position: relative
     font-family: "Montserrat", sans-serif
+    // display: flex
+    // flex-direction: column
+    // justify-content: center
+    // align-items: center
+    // background-color: whitesmoke
 
 .scroll-fix::before // scroll-fix for nav
     content: ''
@@ -18,6 +23,30 @@ body
     height: 100px
     margin-top: -30px
 
+.underline
+    width: 10%
+    height: 1px
+    margin: 5px auto
+    background-color: whitesmoke
+    text-shadow: 0px 0px 2px black
+
+.boldSentence
+    color: #567bbe
+    text-shadow: 0px 0px 1px #567bbe
+    animation: boldSentence 2s
+
+.bl
+    background-color: black
+    margin-bottom: 15px
+
+.hero-shadow
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    // background-color: black
+    z-index: -1
+    background-color:  rgba(0, 0, 0, 0.5)
 
 .nav-bar
     display: flex
@@ -58,29 +87,34 @@ body
     background-size: cover
     background-position: 50% 25%
     background-attachment: fixed
-
     height: 100vh
     padding-top: 20px
     padding-bottom: 40px
     z-index: 10
-    overflow: hidden
+    // overflow: hidden
 
     .title
         font-size: 50px
         text-align: center
-        padding: 10px 20px 5px 20px
-        margin: 18% 5px 10px 5px
-        text-shadow: 0px 0px 2px #ffffff7a
+        padding: 0px 20px 5px 20px
+        margin: 0px 5px 10px 5px
+        text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.253)
         text-transform: uppercase
         letter-spacing: 2px
         background-image: url(/imgs/mountain.jpg)
-        // background-attachment: fixed
-        background-clip: text
+        background-position: center
         background-size: cover
+        background-clip: text
+        // background-size: 50%
         --webkit-background-clip: text
         color: transparent
+        white-space: pre-wrap
+        display: block
         animation: backgroundHeaderColor 2.5s
 
+    .upperTitle
+        margin: 18% 5px 0px 5px
+        padding: 20px 20px 5px 20px
 
     .underline
         width: 10%
@@ -92,18 +126,9 @@ body
     .subtitle
         font-size: 30px
         text-align: center
-        padding: 5px 15px 0 15px
+        padding: 5px 30px 0 30px
         color: #ffffffc5
-        text-shadow: 2px 2px 2px black
-            
-    .hero-shadow
-        position: absolute
-        top: 0
-        width: 100%
-        height: 100%
-        background-color: black
-        z-index: -1
-        background-color:  #000000a9
+        text-shadow: 2px 2px 5px black
 
     .bouncingArrow
         display: block
@@ -115,55 +140,112 @@ body
         color: #65a2ff
         animation: bounce 2s infinite
 
-.aboutMe
+.aboutMe, .projects
         position: relative
         display: flex
         flex-direction: column
-        justify-content: flex-start
+        justify-content: center
         align-items: center
-        background-color: whitesmoke
-        // padding-bottom: 20px
         margin-top: -49px
-        height: 100vh
+        height: 100%
         overflow: hidden
+        background-color: #00081a
 
-        .authorName
-                margin-top: 65px
-                font-size: 36px
-                font-weight: bold
-                text-transform: uppercase
-                letter-spacing: -2px
-                padding: 5px
-
-        .photo
-            display: none
-            position: relative
-            margin: 0
-            bottom: -10px
+        .descriptionWrapper
             display: flex
             flex-direction: column
-            border-radius: 50px
-
-            img
-                display: none
-                position: relative
-                padding: 0
-                margin: 0
-                border-bottom: 2px solid grey
-                height: 400px
-
-        .description-wrapper
-            display: flex
-            flex-direction: column
-            ustify-content: center
+            justify-content: center
             align-items: center
+            max-width: 465px
 
-            .author-description
-                text-align: justify
-                padding: 20px 20px 0px 20px
+            .paragraphsWrapper
+                margin-bottom: 50px
 
-.highlight
-    font-weight: bold
+                .authorName
+                    // color: #414141
+                    color: whitesmoke
+                    margin-top: 60px
+                    margin-bottom: 10px
+                    font-size: 36px
+                    font-weight: bold
+                    text-transform: uppercase
+                    letter-spacing: -2px
+                    padding: 5px
+                    text-align: center
+
+                .authorDescription
+                    color: whitesmoke
+                    text-align: justify
+                    padding: 10px 20px 0px 20px
+                    letter-spacing: 1px
+
+                .second
+                    // width: 62%
+                    text-align: left
+
+        .personalData
+            position: relative
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            border: 2px solid black
+            border-radius: 10px
+            box-shadow: 2px 2px 5px black
+            background-color: #173a8550
+            margin-top: 25px
+            margin-bottom: 30px
+            height: 200px
+
+            .leftSide, .rightSide
+                padding: 10px
+                
+                ul
+                    list-style-type: none
+                    padding: 10px
+                    width: 100%
+
+
+            .leftSide
+
+                .titleList
+                    font-weight: bold
+                    text-transform: uppercase
+                    color:#567bbe
+
+                li
+                    color: whitesmoke
+
+            .rightSide
+                display: flex
+                justify-content: flex-end
+                padding: 0
+
+                .photo
+                    position: relative
+                    padding: 0
+                    margin: 0
+                    width: 150px
+                    display: flex
+                    justify-content: flex-end
+
+
+                    img
+                        position: relative
+                        top: -54px
+                        left: 35px
+                        padding: 0 !important
+                        margin: 0
+                        height: 250px
+
+.projects
+    top: 0
+    margin: 0
+    height: 100vh
+    background-image: url(/imgs/background1.jpg)
+    background-size: cover
+    background-position: bottom
+    background-attachment: fixed
+    z-index: 10
 
     
 

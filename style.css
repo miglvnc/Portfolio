@@ -28,6 +28,16 @@
     background-image: url(/imgs/mountain.jpg);
   }
 }
+@keyframes boldSentence {
+  0% {
+    text-shadow: 0px 0px 0px #567bbe;
+    color: black;
+  }
+  100% {
+    text-shadow: 0px 0px 1px #567bbe;
+    color: #567bbe;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +58,34 @@ body {
   display: block;
   height: 100px;
   margin-top: -30px;
+}
+
+.underline {
+  width: 10%;
+  height: 1px;
+  margin: 5px auto;
+  background-color: whitesmoke;
+  text-shadow: 0px 0px 2px black;
+}
+
+.boldSentence {
+  color: #567bbe;
+  text-shadow: 0px 0px 1px #567bbe;
+  animation: boldSentence 2s;
+}
+
+.bl {
+  background-color: black;
+  margin-bottom: 15px;
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-bar {
@@ -90,23 +128,29 @@ body {
   padding-top: 20px;
   padding-bottom: 40px;
   z-index: 10;
-  overflow: hidden;
 }
 .header .title {
   font-size: 50px;
   text-align: center;
-  padding: 10px 20px 5px 20px;
-  margin: 18% 5px 10px 5px;
-  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.4784313725);
+  padding: 0px 20px 5px 20px;
+  margin: 0px 5px 10px 5px;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.253);
   text-transform: uppercase;
   letter-spacing: 2px;
   background-image: url(/imgs/mountain.jpg);
+  background-position: center;
+  background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
-  background-size: cover;
   --webkit-background-clip: text;
   color: transparent;
+  white-space: pre-wrap;
+  display: block;
   animation: backgroundHeaderColor 2.5s;
+}
+.header .upperTitle {
+  margin: 18% 5px 0px 5px;
+  padding: 20px 20px 5px 20px;
 }
 .header .underline {
   width: 10%;
@@ -118,18 +162,9 @@ body {
 .header .subtitle {
   font-size: 30px;
   text-align: center;
-  padding: 5px 15px 0 15px;
+  padding: 5px 30px 0 30px;
   color: rgba(255, 255, 255, 0.7725490196);
-  text-shadow: 2px 2px 2px black;
-}
-.header .hero-shadow {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.662745098);
+  text-shadow: 2px 2px 5px black;
 }
 .header .bouncingArrow {
   display: block;
@@ -142,53 +177,105 @@ body {
   animation: bounce 2s infinite;
 }
 
-.aboutMe {
+.aboutMe, .projects {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
   margin-top: -49px;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
+  background-color: #00081a;
 }
-.aboutMe .authorName {
-  margin-top: 65px;
+.aboutMe .descriptionWrapper, .projects .descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 465px;
+}
+.aboutMe .descriptionWrapper .paragraphsWrapper, .projects .descriptionWrapper .paragraphsWrapper {
+  margin-bottom: 50px;
+}
+.aboutMe .descriptionWrapper .paragraphsWrapper .authorName, .projects .descriptionWrapper .paragraphsWrapper .authorName {
+  color: whitesmoke;
+  margin-top: 60px;
+  margin-bottom: 10px;
   font-size: 36px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: -2px;
   padding: 5px;
+  text-align: center;
 }
-.aboutMe .photo {
-  display: none;
+.aboutMe .descriptionWrapper .paragraphsWrapper .authorDescription, .projects .descriptionWrapper .paragraphsWrapper .authorDescription {
+  color: whitesmoke;
+  text-align: justify;
+  padding: 10px 20px 0px 20px;
+  letter-spacing: 1px;
+}
+.aboutMe .descriptionWrapper .paragraphsWrapper .second, .projects .descriptionWrapper .paragraphsWrapper .second {
+  text-align: left;
+}
+.aboutMe .personalData, .projects .personalData {
   position: relative;
-  margin: 0;
-  bottom: -10px;
   display: flex;
-  flex-direction: column;
-  border-radius: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  background-color: rgba(23, 58, 133, 0.3137254902);
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 200px;
 }
-.aboutMe .photo img {
-  display: none;
+.aboutMe .personalData .leftSide, .aboutMe .personalData .rightSide, .projects .personalData .leftSide, .projects .personalData .rightSide {
+  padding: 10px;
+}
+.aboutMe .personalData .leftSide ul, .aboutMe .personalData .rightSide ul, .projects .personalData .leftSide ul, .projects .personalData .rightSide ul {
+  list-style-type: none;
+  padding: 10px;
+  width: 100%;
+}
+.aboutMe .personalData .leftSide .titleList, .projects .personalData .leftSide .titleList {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #567bbe;
+}
+.aboutMe .personalData .leftSide li, .projects .personalData .leftSide li {
+  color: whitesmoke;
+}
+.aboutMe .personalData .rightSide, .projects .personalData .rightSide {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+.aboutMe .personalData .rightSide .photo, .projects .personalData .rightSide .photo {
   position: relative;
   padding: 0;
   margin: 0;
-  border-bottom: 2px solid grey;
-  height: 400px;
-}
-.aboutMe .description-wrapper {
+  width: 150px;
   display: flex;
-  flex-direction: column;
-  ustify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
-.aboutMe .description-wrapper .author-description {
-  text-align: justify;
-  padding: 20px 20px 0px 20px;
+.aboutMe .personalData .rightSide .photo img, .projects .personalData .rightSide .photo img {
+  position: relative;
+  top: -54px;
+  left: 35px;
+  padding: 0 !important;
+  margin: 0;
+  height: 250px;
 }
 
-.highlight {
-  font-weight: bold;
+.projects {
+  top: 0;
+  margin: 0;
+  height: 100vh;
+  background-image: url(/imgs/background1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */

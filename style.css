@@ -180,6 +180,10 @@ body {
   height: 100%;
   overflow: hidden;
   background-color: #00081a;
+  z-index: 1;
+}
+.aboutMe .hero-shadow {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .aboutMe .descriptionWrapper {
   display: flex;
@@ -198,10 +202,22 @@ body {
   letter-spacing: 1px;
   line-height: 28px;
 }
+.aboutMe .descriptionWrapper .photo {
+  position: relative;
+  background-image: url(/imgs/profile2.jpg);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px grey;
+  margin-bottom: 15px;
+  overflow: hidden;
+  z-index: 1;
+}
 .aboutMe .personalTitle {
   color: whitesmoke;
-  text-align: left;
-  margin: 0px 120px -40px 0px;
+  text-align: center;
+  margin: 0px 0px -40px 0px;
   background-color: #00081a;
   text-transform: uppercase;
   padding: 5px;
@@ -210,8 +226,7 @@ body {
 .aboutMe .personalData {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   border: 2px solid #d3d3d3;
   border-radius: 10px;
   box-shadow: 2px 2px 5px black;
@@ -220,42 +235,42 @@ body {
   margin-bottom: 30px;
   height: 200px;
 }
-.aboutMe .personalData .leftSide, .aboutMe .personalData .rightSide {
+.aboutMe .personalData .wingSidesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.aboutMe .personalData .wingSidesWrapper .leftSide, .aboutMe .personalData .wingSidesWrapper .rightSide {
   padding: 10px;
 }
-.aboutMe .personalData .leftSide ul, .aboutMe .personalData .rightSide ul {
+.aboutMe .personalData .wingSidesWrapper .leftSide ul, .aboutMe .personalData .wingSidesWrapper .rightSide ul {
   list-style-type: none;
   padding: 10px;
   width: 100%;
 }
-.aboutMe .personalData .leftSide .titleList {
+.aboutMe .personalData .wingSidesWrapper .leftSide .titleList, .aboutMe .personalData .wingSidesWrapper .rightSide .titleList {
   font-weight: bold;
   text-transform: uppercase;
   color: #96abd3;
 }
-.aboutMe .personalData .leftSide li {
+.aboutMe .personalData .wingSidesWrapper .leftSide li, .aboutMe .personalData .wingSidesWrapper .rightSide li {
   color: whitesmoke;
 }
-.aboutMe .personalData .rightSide {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
+.aboutMe .personalData .bottomSide {
+  padding: 0px 10px;
 }
-.aboutMe .personalData .rightSide .photo {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  width: 150px;
-  display: flex;
-  justify-content: flex-end;
+.aboutMe .personalData .bottomSide ul {
+  list-style-type: none;
+  padding: 0px 10px;
+  width: 100%;
 }
-.aboutMe .personalData .rightSide .photo img {
-  position: relative;
-  top: -54px;
-  left: 35px;
-  padding: 0 !important;
-  margin: 0;
-  height: 250px;
+.aboutMe .personalData .bottomSide .titleList {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #96abd3;
+}
+.aboutMe .personalData .bottomSide li {
+  color: whitesmoke;
 }
 
 .headerTitle {
@@ -305,5 +320,173 @@ body {
 }
 
 .projects {
+  position: relative;
   background-color: #000c2e;
+  background-image: url(/imgs/projectsbackground.jpg);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  z-index: 1;
+}
+.projects .hero-shadow {
+  background-color: rgba(0, 8, 29, 0.801);
+}
+.projects .card {
+  max-width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.projects .card .techTitle {
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+  font-size: 32px;
+}
+.projects .card .projectGif {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 280px;
+  height: 400px;
+  margin: 0 auto;
+  z-index: 1;
+  background: royalblue;
+  border-radius: 10px;
+  background-image: url(/imgs/todolist.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.projects .card .projectGif .techList {
+  list-style-type: none;
+}
+.projects .card .projectGif .techList .techEl {
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px black;
+}
+.projects .card .projectGif .techList .frontendEl {
+  color: #f3ec91;
+}
+.projects .card .projectGif .techList .frontendEl:first-child {
+  color: #f3c591;
+}
+.projects .card .projectGif .techList .testEl {
+  color: #91c7f3;
+}
+.projects .card .projectGif .techList .testEl:first-child {
+  color: #f39191;
+}
+.projects .card .projectGif .techList .testEl:last-child {
+  color: #b8f391;
+}
+.projects .card .projectGif .hero-shadow {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(0deg, rgba(0, 12, 46, 0.9) 30%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 8px;
+}
+.projects .card .techDescription {
+  text-align: left;
+  padding: 15px;
+  margin: 0 auto;
+  letter-spacing: 0px;
+  line-height: 28px;
+  max-width: 280px;
+  background-color: rgba(0, 12, 46, 0.9);
+  border-bottom-left-radius: 10px;
+}
+
+.certs {
+  position: relative;
+  background-color: #00103d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+  color: whitesmoke;
+  z-index: 1;
+}
+.certs .certContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 465px;
+  margin: 30px auto;
+}
+.certs .certContainer .logo {
+  height: 100px;
+  margin: 0 auto;
+}
+.certs .certContainer .certTitle {
+  text-align: center;
+  padding: 30px 10px 0px 10px;
+}
+.certs .certContainer .certDesc {
+  text-align: center;
+  padding: 5px 20px 5px 20px;
+  margin: 20px auto 10px;
+  letter-spacing: 0px;
+  line-height: 28px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #1f1d1d;
+  background-color: #030303;
+  margin: 0;
+  color: white;
+}
+.footer .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer .wrapper .contact, .footer .wrapper .quicklinks {
+  margin-top: 30px;
+}
+.footer .wrapper .contact .title, .footer .wrapper .quicklinks .title {
+  text-align: center;
+}
+.footer .wrapper .contact .linklist, .footer .wrapper .quicklinks .linklist {
+  list-style-type: none;
+  text-align: center;
+}
+.footer .wrapper .contact .linklist .quickLink, .footer .wrapper .quicklinks .linklist .quickLink {
+  padding: 10px;
+}
+.footer .wrapper .contact .mail, .footer .wrapper .quicklinks .mail {
+  padding: 10px;
+}
+.footer .wrapper .contact .icons, .footer .wrapper .quicklinks .icons {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer .wrapper .contact .icons .icon, .footer .wrapper .quicklinks .icons .icon {
+  margin: 0 auto;
+  padding: 20px;
+}
+.footer .wrapper .contact .icons .icon .socialIcon, .footer .wrapper .quicklinks .icons .icon .socialIcon {
+  font-size: 38px;
+}
+.footer .copyright {
+  border-top: 1px solid whitesmoke;
+  padding-top: 30px;
+  margin: 15px 0px;
 }/*# sourceMappingURL=style.css.map */

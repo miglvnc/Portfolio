@@ -142,60 +142,84 @@ body
         animation: bounce 2s infinite
 
 .aboutMe
-        position: relative
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: -49px
+    padding-bottom: 30px
+    height: 100%
+    overflow: hidden
+    background-color: #00081a
+    // background-image: url(imgs/profile4.png)
+    // background-size: contain
+    // background-repeat: no-repeat
+    // background-position: bottom right
+    z-index: 1
+
+    .hero-shadow
+        background-color: rgba(0, 0, 0, 0.5)
+
+    .descriptionWrapper
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        margin-top: -49px
-        padding-bottom: 30px
-        height: 100%
-        overflow: hidden
-        background-color: #00081a
+        max-width: 465px
 
-        .descriptionWrapper
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            max-width: 465px
+        .paragraphsWrapper
+            margin-bottom: 50px
 
-            .paragraphsWrapper
-                margin-bottom: 50px
+            .authorDescription
+                color: whitesmoke
+                text-align: justify
+                padding: 10px 20px 0px 20px
+                letter-spacing: 1px
+                line-height: 28px
 
-                .authorDescription
-                    color: whitesmoke
-                    text-align: justify
-                    padding: 10px 20px 0px 20px
-                    letter-spacing: 1px
-                    line-height: 28px
-
-                .second
-                    // width: 62%
-                    // text-align: left
-        .personalTitle
-            color: whitesmoke
-            text-align: left
-            margin: 0px 120px -40px 0px
-            background-color: #00081a
-            text-transform: uppercase
-            padding: 5px
-            // border: 2px solid whitesmoke
-            // border-radius: 10px
-            z-index: 10
-
-        .personalData
+        .photo
             position: relative
+            background-image: url(/imgs/profile2.jpg)
+            background-size: cover
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            // border: 2px solid darkblue
+            box-shadow: 0px 0px 10px grey
+            margin-bottom: 15px
+            overflow: hidden
+            z-index: 1
+
+            
+    .personalTitle
+        color: whitesmoke
+        text-align: center
+        margin: 0px 0px -40px 0px
+        background-color: #00081a
+        text-transform: uppercase
+        padding: 5px
+        // border: 2px solid whitesmoke
+        // border-radius: 10px
+        z-index: 10
+
+    .personalData
+        position: relative
+        display: flex
+        flex-direction: column
+        // justify-content: space-around
+        border: 2px solid #d3d3d3
+        border-radius: 10px
+        box-shadow: 2px 2px 5px black
+        background-color: #152d7000
+        margin-top: 25px
+        margin-bottom: 30px
+        height: 200px
+
+        .wingSidesWrapper
             display: flex
             flex-direction: row
             justify-content: space-around
-            border: 2px solid #d3d3d3
-            border-radius: 10px
-            box-shadow: 2px 2px 5px black
-            background-color: #152d7000
-            margin-top: 25px
-            margin-bottom: 30px
-            height: 200px
 
             .leftSide, .rightSide
                 padding: 10px
@@ -205,9 +229,6 @@ body
                     padding: 10px
                     width: 100%
 
-
-            .leftSide
-
                 .titleList
                     font-weight: bold
                     text-transform: uppercase
@@ -215,28 +236,25 @@ body
 
                 li
                     color: whitesmoke
+                    
 
-            .rightSide
-                display: flex
-                justify-content: flex-end
-                padding: 0
+        .bottomSide
+            padding: 0px 10px
+            
+            ul
+                list-style-type: none
+                padding: 0px 10px
+                width: 100%
 
-                .photo
-                    position: relative
-                    padding: 0
-                    margin: 0
-                    width: 150px
-                    display: flex
-                    justify-content: flex-end
+            .titleList
+                font-weight: bold
+                text-transform: uppercase
+                color:#96abd3
 
+            li
+                color: whitesmoke
 
-                    img
-                        position: relative
-                        top: -54px
-                        left: 35px
-                        padding: 0 !important
-                        margin: 0
-                        height: 250px
+            
 
 
 .headerTitle
@@ -284,26 +302,184 @@ body
             line-height: 28px
 
 .projects
+    position: relative
+    // background-color: #595a5e
     background-color: #000c2e
+    background-image: url(/imgs/projectsbackground.jpg)
+    background-size: cover
+    background-position: left
+    background-attachment: fixed
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: whitesmoke
+    z-index: 1
+
+    .hero-shadow
+        background-color: rgba(0, 8, 29, 0.801)
+
+    .card
+        max-width: 400px
+        margin-top: 30px
+        margin-bottom: 30px
+        padding: 10px
+
+        .techTitle
+            text-align: center
+            padding: 20px 10px 10px 10px
+            font-size: 32px
+            // color: #91b8ff
+            // color: whitesmoke
+
+        .projectGif
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            align-items: center
+            max-width: 280px
+            height: 400px
+            margin: 0 auto
+            z-index: 1
+            background: royalblue
+            border-radius: 10px
+            // border: 1px solid #00113f
+
+            background-image: url(/imgs/todolist.gif)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: bottom
+
+            .techList
+                list-style-type: none
+
+                .techEl
+                    padding: 10px
+                    text-align: center
+                    font-size: 24px
+                    text-shadow: 2px 2px 5px black
+
+                .frontendEl
+                    color: #f3ec91 
+
+                .frontendEl:first-child
+                    color: #f3c591 
+
+                .testEl
+                    color: #91c7f3 
+
+                .testEl:first-child
+                    color: #f39191 
+
+                .testEl:last-child
+                    color: #b8f391 
+
+
+            .hero-shadow
+                // background-color: rgba(0, 0, 0, 0.5)
+                background: rgb(9,9,121)
+                background: linear-gradient(0deg, rgba(0, 12, 46, 0.9) 30%, rgba(0,0,0,0) 100%)
+                border-radius: 8px
+
+        .techDescription
+            text-align: left
+            padding: 15px
+            margin: 0 auto
+            letter-spacing: 0px
+            line-height: 28px
+            max-width: 280px
+            background-color: rgba(0, 12, 46, 0.9)
+            border-bottom-left-radius: 10px
+            // border-bottom-right-radius: 10px
+
+.certs
+    position: relative
+    background-color: #00103d
+    // background-color: #00081a
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    padding: 50px 0
+    color: whitesmoke
+    z-index: 1
+
+    .certContainer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        max-width: 465px
+        margin: 30px auto
+
+        .logo
+            height: 100px
+            margin: 0 auto
+
+        .certTitle
+            text-align: center
+            padding: 30px 10px 0px 10px
+
+        .certDesc
+            text-align: center
+            padding: 5px 20px 5px 20px
+            margin: 20px auto 10px
+            letter-spacing: 0px
+            line-height: 28px
 
 
 
+.footer
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    padding: 10px
+    border-top: 1px solid #1f1d1d
+    background-color: #030303
+    margin: 0
+    color: white
+    // height: 350px
 
-// .projects
-//     display: flex
-//     flex-direction: column
-//     justify-content: flex-start
-//     align-content: center
-//     top: 0
-//     margin: 0
-//     height: 100vh
-//     background-color: #001136
-//     // background-image: url(/imgs/background1.jpg)
-//     // background-size: cover
-//     // background-position: bottom
-//     // background-attachment: fixed
-//     z-index: 10
+    .wrapper
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        margin-bottom: 30px
+
+        .contact, .quicklinks
+            margin-top: 30px
+
+            .title
+                text-align: center
 
 
-    
+            .linklist
+                list-style-type: none
+                text-align: center
 
+                .quickLink
+                    padding: 10px
+            
+            .mail
+                padding: 10px
+
+            .icons
+                text-align: center
+                margin-top: 20px
+
+                .icon
+                    margin: 0 auto
+                    padding: 20px
+
+                    .socialIcon
+                        font-size: 38px
+                
+
+    .copyright
+        border-top: 1px solid whitesmoke
+        padding-top: 30px
+        margin: 15px 0px

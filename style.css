@@ -169,7 +169,7 @@ body {
   animation: bounce 2s infinite;
 }
 
-.aboutMe, .projects {
+.aboutMe {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -181,24 +181,24 @@ body {
   overflow: hidden;
   background-color: #00081a;
 }
-.aboutMe .descriptionWrapper, .projects .descriptionWrapper {
+.aboutMe .descriptionWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 465px;
 }
-.aboutMe .descriptionWrapper .paragraphsWrapper, .projects .descriptionWrapper .paragraphsWrapper {
+.aboutMe .descriptionWrapper .paragraphsWrapper {
   margin-bottom: 50px;
 }
-.aboutMe .descriptionWrapper .paragraphsWrapper .authorDescription, .projects .descriptionWrapper .paragraphsWrapper .authorDescription {
+.aboutMe .descriptionWrapper .paragraphsWrapper .authorDescription {
   color: whitesmoke;
   text-align: justify;
   padding: 10px 20px 0px 20px;
   letter-spacing: 1px;
   line-height: 28px;
 }
-.aboutMe .personalTitle, .projects .personalTitle {
+.aboutMe .personalTitle {
   color: whitesmoke;
   text-align: left;
   margin: 0px 120px -40px 0px;
@@ -207,7 +207,7 @@ body {
   padding: 5px;
   z-index: 10;
 }
-.aboutMe .personalData, .projects .personalData {
+.aboutMe .personalData {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -220,28 +220,28 @@ body {
   margin-bottom: 30px;
   height: 200px;
 }
-.aboutMe .personalData .leftSide, .aboutMe .personalData .rightSide, .projects .personalData .leftSide, .projects .personalData .rightSide {
+.aboutMe .personalData .leftSide, .aboutMe .personalData .rightSide {
   padding: 10px;
 }
-.aboutMe .personalData .leftSide ul, .aboutMe .personalData .rightSide ul, .projects .personalData .leftSide ul, .projects .personalData .rightSide ul {
+.aboutMe .personalData .leftSide ul, .aboutMe .personalData .rightSide ul {
   list-style-type: none;
   padding: 10px;
   width: 100%;
 }
-.aboutMe .personalData .leftSide .titleList, .projects .personalData .leftSide .titleList {
+.aboutMe .personalData .leftSide .titleList {
   font-weight: bold;
   text-transform: uppercase;
   color: #96abd3;
 }
-.aboutMe .personalData .leftSide li, .projects .personalData .leftSide li {
+.aboutMe .personalData .leftSide li {
   color: whitesmoke;
 }
-.aboutMe .personalData .rightSide, .projects .personalData .rightSide {
+.aboutMe .personalData .rightSide {
   display: flex;
   justify-content: flex-end;
   padding: 0;
 }
-.aboutMe .personalData .rightSide .photo, .projects .personalData .rightSide .photo {
+.aboutMe .personalData .rightSide .photo {
   position: relative;
   padding: 0;
   margin: 0;
@@ -249,7 +249,7 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.aboutMe .personalData .rightSide .photo img, .projects .personalData .rightSide .photo img {
+.aboutMe .personalData .rightSide .photo img {
   position: relative;
   top: -54px;
   left: 35px;
@@ -270,17 +270,40 @@ body {
   text-align: center;
 }
 
-.projects {
+.softSkills, .projects {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-content: center;
   top: 0;
-  margin: 0;
+  padding: 20px;
   height: 100%;
-  background-image: url(/imgs/background1.jpg);
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-  z-index: 10;
+  background-color: #001136;
+}
+.softSkills .skill, .projects .skill {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: whitesmoke;
+  padding: 20px 5px;
+  max-width: 465px;
+  margin: 0 auto;
+}
+.softSkills .skill .skillTitle, .projects .skill .skillTitle {
+  padding: 20px 10px;
+}
+.softSkills .skill .skillIcon, .projects .skill .skillIcon {
+  font-size: 75px;
+  color: #96abd3;
+}
+.softSkills .skill .skillDescription, .projects .skill .skillDescription {
+  text-align: center;
+  padding: 5px 20px 5px 20px;
+  letter-spacing: 0px;
+  line-height: 28px;
+}
+
+.projects {
+  background-color: #000c2e;
 }/*# sourceMappingURL=style.css.map */

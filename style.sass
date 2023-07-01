@@ -141,7 +141,7 @@ body
         color: #65a2ff
         animation: bounce 2s infinite
 
-.aboutMe, .projects
+.aboutMe
         position: relative
         display: flex
         flex-direction: column
@@ -250,19 +250,59 @@ body
     padding: 10px
     text-align: center
 
-.projects
+.softSkills, .projects
+    position: relative
     display: flex
     flex-direction: column
-    justify-content: flex-start
+    justify-content: space-around
     align-content: center
     top: 0
-    margin: 0
+    padding: 20px
     height: 100%
-    background-image: url(/imgs/background1.jpg)
-    background-size: cover
-    background-position: bottom
-    background-attachment: fixed
-    z-index: 10
+    background-color: #001136
+
+    .skill
+        display: block
+        text-align: center
+        text-transform: uppercase
+        color: whitesmoke
+        padding: 20px 5px
+        max-width: 465px
+        margin: 0 auto
+
+        .skillTitle
+            padding: 20px 10px
+
+        .skillIcon
+            font-size: 75px
+            color: #96abd3
+
+        .skillDescription
+            text-align: center
+            padding: 5px 20px 5px 20px
+            letter-spacing: 0px
+            line-height: 28px
+
+.projects
+    background-color: #000c2e
+
+
+
+
+// .projects
+//     display: flex
+//     flex-direction: column
+//     justify-content: flex-start
+//     align-content: center
+//     top: 0
+//     margin: 0
+//     height: 100vh
+//     background-color: #001136
+//     // background-image: url(/imgs/background1.jpg)
+//     // background-size: cover
+//     // background-position: bottom
+//     // background-attachment: fixed
+//     z-index: 10
 
 
     

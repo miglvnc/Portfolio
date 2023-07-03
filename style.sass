@@ -11,11 +11,8 @@ html
 body
     position: relative
     font-family: "Montserrat", sans-serif
-    // display: flex
-    // flex-direction: column
-    // justify-content: center
-    // align-items: center
-    // background-color: whitesmoke
+
+// for all classes
 
 .scroll-fix::before // scroll-fix for nav
     content: ''
@@ -25,76 +22,65 @@ body
 
 .underline
     width: 10%
+    max-width: 100px
     height: 1px
     margin: 5px auto
     background-color: whitesmoke
     text-shadow: 0px 0px 2px black
 
 .boldSentence
-    color: #96abd3
-    text-shadow: 0px 0px 1px #96abd3
+    font-weight: bold
 
 .bl
     margin-bottom: 15px
 
-.hero-shadow, .hero-shadowSecond
+.hero-shadow
     position: absolute
     top: 0
     width: 100%
     height: 100%
-    // background-color: black
     z-index: -1
     background-color:  rgba(0, 0, 0, 0.5)
-
-.hero-shadowSecond
     background-color: rgba(0, 29, 73, 0.5)
 
-.nav-bar
-    display: flex
-    position: sticky
-    top: 0
-    width: 100%
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    padding: 15px
-    background-color: #07070773
-    z-index: 100
+.headerTitle
+    color: whitesmoke
+    margin-top: 30px
+    margin-bottom: 10px
+    font-size: 36px
+    font-weight: bold
+    text-transform: uppercase
+    letter-spacing: -2px
+    padding: 10px
+    text-align: center
 
-    .menu-list
-        display: flex
-        flex-direction: row
-        list-style-type: none
+a
+    text-decoration: none
+    color: #96abd3
+    transition: color 0.3s
 
-        li
-            // padding: 10px
+a:hover
+    color: #6994e4
 
-            a
-                padding: 10px
-                color: white
-                font-weight: bold
-                text-decoration: none
-                font-size: 15px
-                text-transform: uppercase
-
+// main structure
 
 .header
     position: relative
-    // top: -49px
     display: flex
     flex-direction: column
+    justify-content: center
     align-items: center
-    background-image: url(/imgs/header.jpg)
-    background-size: cover
-    background-position: 50% 25%
-    background-attachment: fixed
     height: 100vh
     padding-top: 20px
     padding-bottom: 40px
     z-index: 10
-    // overflow: hidden
+    background-image: url(/imgs/header.jpg)
+    background-size: cover
+    background-position: 50% 25%
+    background-attachment: fixed
 
     .title
+        display: block
         font-size: 50px
         text-align: center
         padding: 0px 20px 5px 20px
@@ -102,19 +88,17 @@ body
         text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.253)
         text-transform: uppercase
         letter-spacing: 2px
+        white-space: pre-wrap
         background-image: url(/imgs/mountain.jpg)
         background-position: center
         background-size: cover
         background-clip: text
-        // background-size: 50%
         --webkit-background-clip: text
         color: transparent
-        white-space: pre-wrap
-        display: block
         animation: backgroundHeaderColor 2.5s
 
     .upperTitle
-        margin: 18% 5px 0px 5px
+        margin: 0 5px 0px 5px
         padding: 20px 20px 5px 20px
 
     .underline
@@ -147,16 +131,11 @@ body
     flex-direction: column
     justify-content: center
     align-items: center
-    // margin-top: -49px
     padding-bottom: 30px
     height: 100%
     overflow: hidden
-    background-color: #00081a
-    // background-image: url(imgs/profile4.png)
-    // background-size: contain
-    // background-repeat: no-repeat
-    // background-position: bottom right
     z-index: 1
+    background-color: #00081a
 
     .hero-shadow
         background-color: rgba(0, 0, 0, 0.5)
@@ -166,21 +145,10 @@ body
         flex-direction: column
         justify-content: center
         align-items: center
-        max-width: 465px
+        max-width: 600px
 
         .paragraphsWrapper
             margin-bottom: 50px
-
-            .headerTitle
-                color: whitesmoke
-                margin-top: 30px
-                margin-bottom: 10px
-                font-size: 36px
-                font-weight: bold
-                text-transform: uppercase
-                letter-spacing: -2px
-                padding: 10px
-                text-align: center
 
             .authorDescription
                 color: whitesmoke
@@ -193,10 +161,9 @@ body
             position: relative
             background-image: url(/imgs/profile2.jpg)
             background-size: cover
-            width: 200px
-            height: 200px
+            width: 250px
+            height: 250px
             border-radius: 50%
-            // border: 2px solid darkblue
             box-shadow: 0px 0px 10px grey
             margin-bottom: 15px
             overflow: hidden
@@ -206,26 +173,26 @@ body
     .personalTitle
         color: whitesmoke
         text-align: center
-        margin: 0px 0px -40px 0px
+        margin: 0px 0px -45px 0px
         background-color: #00081a
         text-transform: uppercase
         padding: 5px
-        // border: 2px solid whitesmoke
-        // border-radius: 10px
         z-index: 10
 
     .personalData
         position: relative
         display: flex
         flex-direction: column
-        // justify-content: space-around
         border: 2px solid #d3d3d3
         border-radius: 10px
         box-shadow: 2px 2px 5px black
         background-color: #152d7000
         margin-top: 25px
         margin-bottom: 30px
-        height: 200px
+        padding: 20px 0
+        max-width: 500px
+
+        font-size: 22px
 
         .wingSidesWrapper
             display: flex
@@ -233,7 +200,8 @@ body
             justify-content: space-around
 
             .leftSide, .rightSide
-                padding: 10px
+                padding-left: 10px
+                padding-right: 10px
                 
                 ul
                     list-style-type: none
@@ -266,7 +234,7 @@ body
                 color: whitesmoke
 
 
-.softSkills
+.softSkills, .certs
     position: relative
     display: flex
     flex-direction: column
@@ -309,7 +277,7 @@ body
     background-attachment: fixed
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: space-around
     align-items: center
     color: whitesmoke
     z-index: 1
@@ -317,96 +285,98 @@ body
     .hero-shadow
         background-color: rgba(0, 8, 29, 0.801)
 
-    .card
-        max-width: 400px
-        margin-top: 30px
-        margin-bottom: 30px
-        padding: 10px
+    .techWrapper
+        height: 100%
+        width: 100%
+        display: flex
+        // flex-wrap: wrap
+        flex-direction: column
+        justify-content: center
+        align-items: stretch
 
-        .techTitle
-            text-align: center
-            padding: 20px 10px 10px 10px
-            font-size: 32px
-            // color: #91b8ff
-            // color: whitesmoke
-
-        .projectGif
-            position: relative
-            display: flex
-            flex-direction: column
-            justify-content: flex-end
-            align-items: center
-            max-width: 280px
-            height: 400px
-            margin: 0 auto
-            z-index: 1
-            background: royalblue
-            border-radius: 10px
-            // border: 1px solid #00113f
-
-            background-image: url(/imgs/sportowa.gif)
-            background-size: cover
-            background-repeat: no-repeat
-            background-position: bottom
-
-            .techList
-                list-style-type: none
-
-                .techEl
-                    padding: 10px
-                    text-align: center
-                    font-size: 24px
-                    text-shadow: 2px 2px 5px black
-
-                .frontendEl
-                    color: #f3ec91 
-
-                .frontendEl:first-child
-                    color: #f3c591 
-
-                .testEl
-                    color: #91c7f3 
-
-                .testEl:first-child
-                    color: #f39191 
-
-                .testEl:last-child
-                    color: #b8f391 
+        .card
+            margin-top: 30px
+            margin-bottom: 30px
+            padding: 10px
 
 
+            .techTitle
+                text-align: center
+                padding: 20px 10px 10px 10px
+                font-size: 32px
+                text-transform: uppercase
 
-            .hero-shadow
-                // background-color: rgba(0, 0, 0, 0.5)
-                background: rgb(9,9,121)
-                background: linear-gradient(0deg, rgba(0, 12, 46, 0.9) 30%, rgba(0,0,0,0) 100%)
-                border-radius: 8px
+            .projectGif
+                position: relative
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                align-items: center
+                max-width: 350px
+                height: 400px
+                margin: 0 auto
+                z-index: 1
+                background: royalblue
+                border-radius: 10px
 
-        .testProject
-            background-image: url(/imgs/sql.gif)
-            background-position: top
+                background-image: url(/imgs/sportowa.gif)
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: bottom
 
-        .techDescription
-            text-align: left
-            padding: 15px
-            margin: 0 auto
-            letter-spacing: 0px
-            line-height: 28px
-            max-width: 280px
-            background-color: rgba(0, 12, 46, 0.9)
-            border-bottom-left-radius: 10px
-            // border-bottom-right-radius: 10px
+                .techList
+                    list-style-type: none
+
+                    .techEl
+                        padding: 10px
+                        text-align: center
+                        font-size: 32px
+                        text-shadow: 2px 2px 5px black
+
+                    .frontendEl
+                        color: #f3ec91 
+
+                    .frontendEl:first-child
+                        color: #f3c591 
+
+                    .testEl
+                        color: #91c7f3 
+
+                    .testEl:first-child
+                        color: #f39191 
+
+                    .testEl:last-child
+                        color: #b8f391 
+
+
+
+                .hero-shadow
+                    background: rgb(9,9,121)
+                    background: linear-gradient(0deg, rgba(0, 12, 46, 0.9) 30%, rgba(0,0,0,0) 100%)
+                    border-radius: 8px
+
+            .testProject
+                background-image: url(/imgs/sql.gif)
+                background-position: top
+
+            .techDescription
+                text-align: left
+                padding: 15px 15px 15px 15px
+                margin: 0 auto
+                letter-spacing: 0px
+                line-height: 28px
+                max-width: 350px
+                background-color: rgba(0, 12, 46, 0.9)
+                border-bottom-left-radius: 10px
+                color: rgb(214, 214, 214)
+
+    .techSummary
+        text-align: center
+        font-size: 20px
 
 .certs
-    position: relative
     background-color: #000d2b
-    // background-color: #00081a
-    display: flex
-    flex-direction: column
-    justify-content: space-evenly
-    align-items: center
-    padding: 50px 0
     color: whitesmoke
-    z-index: 1
 
     .certContainer
         display: flex
@@ -439,11 +409,9 @@ body
     justify-content: space-evenly
     align-items: center
     padding: 10px
-    border-top: 1px solid #1f1d1d
     background-color: #00081a
     margin: 0
     color: white
-    // height: 350px
 
     .wrapper
         width: 100%
@@ -458,6 +426,7 @@ body
 
             .title
                 text-align: center
+                padding: 15px
 
 
             .linklist

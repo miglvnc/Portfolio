@@ -52,6 +52,7 @@ body {
 
 .underline {
   width: 10%;
+  max-width: 100px;
   height: 1px;
   margin: 5px auto;
   background-color: whitesmoke;
@@ -59,68 +60,62 @@ body {
 }
 
 .boldSentence {
-  color: #96abd3;
-  text-shadow: 0px 0px 1px #96abd3;
+  font-weight: bold;
 }
 
 .bl {
   margin-bottom: 15px;
 }
 
-.hero-shadow, .hero-shadowSecond {
+.hero-shadow {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-shadowSecond {
   background-color: rgba(0, 29, 73, 0.5);
 }
 
-.nav-bar {
-  display: flex;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background-color: rgba(7, 7, 7, 0.4509803922);
-  z-index: 100;
-}
-.nav-bar .menu-list {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-.nav-bar .menu-list li a {
-  padding: 10px;
-  color: white;
+.headerTitle {
+  color: whitesmoke;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 36px;
   font-weight: bold;
-  text-decoration: none;
-  font-size: 15px;
   text-transform: uppercase;
+  letter-spacing: -2px;
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #96abd3;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #6994e4;
 }
 
 .header {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-image: url(/imgs/header.jpg);
-  background-size: cover;
-  background-position: 50% 25%;
-  background-attachment: fixed;
   height: 100vh;
   padding-top: 20px;
   padding-bottom: 40px;
   z-index: 10;
+  background-image: url(/imgs/header.jpg);
+  background-size: cover;
+  background-position: 50% 25%;
+  background-attachment: fixed;
 }
 .header .title {
+  display: block;
   font-size: 50px;
   text-align: center;
   padding: 0px 20px 5px 20px;
@@ -128,6 +123,7 @@ body {
   text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.253);
   text-transform: uppercase;
   letter-spacing: 2px;
+  white-space: pre-wrap;
   background-image: url(/imgs/mountain.jpg);
   background-position: center;
   background-size: cover;
@@ -135,12 +131,10 @@ body {
           background-clip: text;
   --webkit-background-clip: text;
   color: transparent;
-  white-space: pre-wrap;
-  display: block;
   animation: backgroundHeaderColor 2.5s;
 }
 .header .upperTitle {
-  margin: 18% 5px 0px 5px;
+  margin: 0 5px 0px 5px;
   padding: 20px 20px 5px 20px;
 }
 .header .underline {
@@ -177,8 +171,8 @@ body {
   padding-bottom: 30px;
   height: 100%;
   overflow: hidden;
-  background-color: #00081a;
   z-index: 1;
+  background-color: #00081a;
 }
 .aboutMe .hero-shadow {
   background-color: rgba(0, 0, 0, 0.5);
@@ -188,21 +182,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 465px;
+  max-width: 600px;
 }
 .aboutMe .descriptionWrapper .paragraphsWrapper {
   margin-bottom: 50px;
-}
-.aboutMe .descriptionWrapper .paragraphsWrapper .headerTitle {
-  color: whitesmoke;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  padding: 10px;
-  text-align: center;
 }
 .aboutMe .descriptionWrapper .paragraphsWrapper .authorDescription {
   color: whitesmoke;
@@ -215,8 +198,8 @@ body {
   position: relative;
   background-image: url(/imgs/profile2.jpg);
   background-size: cover;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px grey;
   margin-bottom: 15px;
@@ -226,7 +209,7 @@ body {
 .aboutMe .personalTitle {
   color: whitesmoke;
   text-align: center;
-  margin: 0px 0px -40px 0px;
+  margin: 0px 0px -45px 0px;
   background-color: #00081a;
   text-transform: uppercase;
   padding: 5px;
@@ -242,7 +225,9 @@ body {
   background-color: rgba(21, 45, 112, 0);
   margin-top: 25px;
   margin-bottom: 30px;
-  height: 200px;
+  padding: 20px 0;
+  max-width: 500px;
+  font-size: 22px;
 }
 .aboutMe .personalData .wingSidesWrapper {
   display: flex;
@@ -250,7 +235,8 @@ body {
   justify-content: space-around;
 }
 .aboutMe .personalData .wingSidesWrapper .leftSide, .aboutMe .personalData .wingSidesWrapper .rightSide {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .aboutMe .personalData .wingSidesWrapper .leftSide ul, .aboutMe .personalData .wingSidesWrapper .rightSide ul {
   list-style-type: none;
@@ -282,7 +268,7 @@ body {
   color: whitesmoke;
 }
 
-.softSkills {
+.softSkills, .certs {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -293,7 +279,7 @@ body {
   height: 100%;
   background-color: #000a22;
 }
-.softSkills .skill {
+.softSkills .skill, .certs .skill {
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -302,14 +288,14 @@ body {
   max-width: 465px;
   margin: 0 auto;
 }
-.softSkills .skill .skillTitle {
+.softSkills .skill .skillTitle, .certs .skill .skillTitle {
   padding: 20px 10px;
 }
-.softSkills .skill .skillIcon {
+.softSkills .skill .skillIcon, .certs .skill .skillIcon {
   font-size: 75px;
   color: #96abd3;
 }
-.softSkills .skill .skillDescription {
+.softSkills .skill .skillDescription, .certs .skill .skillDescription {
   text-align: center;
   padding: 5px 20px 5px 20px;
   letter-spacing: 0px;
@@ -326,7 +312,7 @@ body {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: whitesmoke;
   z-index: 1;
@@ -334,24 +320,32 @@ body {
 .projects .hero-shadow {
   background-color: rgba(0, 8, 29, 0.801);
 }
-.projects .card {
-  max-width: 400px;
+.projects .techWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.projects .techWrapper .card {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 10px;
 }
-.projects .card .techTitle {
+.projects .techWrapper .card .techTitle {
   text-align: center;
   padding: 20px 10px 10px 10px;
   font-size: 32px;
+  text-transform: uppercase;
 }
-.projects .card .projectGif {
+.projects .techWrapper .card .projectGif {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  max-width: 280px;
+  max-width: 350px;
   height: 400px;
   margin: 0 auto;
   z-index: 1;
@@ -362,60 +356,58 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
 }
-.projects .card .projectGif .techList {
+.projects .techWrapper .card .projectGif .techList {
   list-style-type: none;
 }
-.projects .card .projectGif .techList .techEl {
+.projects .techWrapper .card .projectGif .techList .techEl {
   padding: 10px;
   text-align: center;
-  font-size: 24px;
+  font-size: 32px;
   text-shadow: 2px 2px 5px black;
 }
-.projects .card .projectGif .techList .frontendEl {
+.projects .techWrapper .card .projectGif .techList .frontendEl {
   color: #f3ec91;
 }
-.projects .card .projectGif .techList .frontendEl:first-child {
+.projects .techWrapper .card .projectGif .techList .frontendEl:first-child {
   color: #f3c591;
 }
-.projects .card .projectGif .techList .testEl {
+.projects .techWrapper .card .projectGif .techList .testEl {
   color: #91c7f3;
 }
-.projects .card .projectGif .techList .testEl:first-child {
+.projects .techWrapper .card .projectGif .techList .testEl:first-child {
   color: #f39191;
 }
-.projects .card .projectGif .techList .testEl:last-child {
+.projects .techWrapper .card .projectGif .techList .testEl:last-child {
   color: #b8f391;
 }
-.projects .card .projectGif .hero-shadow {
+.projects .techWrapper .card .projectGif .hero-shadow {
   background: rgb(9, 9, 121);
   background: linear-gradient(0deg, rgba(0, 12, 46, 0.9) 30%, rgba(0, 0, 0, 0) 100%);
   border-radius: 8px;
 }
-.projects .card .testProject {
+.projects .techWrapper .card .testProject {
   background-image: url(/imgs/sql.gif);
   background-position: top;
 }
-.projects .card .techDescription {
+.projects .techWrapper .card .techDescription {
   text-align: left;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
   margin: 0 auto;
   letter-spacing: 0px;
   line-height: 28px;
-  max-width: 280px;
+  max-width: 350px;
   background-color: rgba(0, 12, 46, 0.9);
   border-bottom-left-radius: 10px;
+  color: rgb(214, 214, 214);
+}
+.projects .techSummary {
+  text-align: center;
+  font-size: 20px;
 }
 
 .certs {
-  position: relative;
   background-color: #000d2b;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 50px 0;
   color: whitesmoke;
-  z-index: 1;
 }
 .certs .certContainer {
   display: flex;
@@ -447,7 +439,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  border-top: 1px solid #1f1d1d;
   background-color: #00081a;
   margin: 0;
   color: white;
@@ -465,6 +456,7 @@ body {
 }
 .footer .wrapper .contact .title, .footer .wrapper .quicklinks .title {
   text-align: center;
+  padding: 15px;
 }
 .footer .wrapper .contact .linklist, .footer .wrapper .quicklinks .linklist {
   list-style-type: none;

@@ -1,1 +1,44 @@
-/*# sourceMappingURL=medium.css.map */
+p {
+  font-size: 1.2rem;
+}
+
+.headerTitle {
+  font-size: 46px;
+}
+
+.certTitle {
+  font-size: 26px;
+}
+
+.skillTitle {
+  font-size: 26px;
+}
+
+.header .title {
+  font-size: 70px;
+}
+.header .subtitle {
+  font-size: 40px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .headerTitle {
+    font-size: 56px;
+  }
+  .header .title {
+    font-size: 100px;
+  }
+  .header .subtitle {
+    font-size: 60px;
+  }
+  .projects .techWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .projects .techSummary {
+    font-size: 30px;
+    padding: 20px;
+  }
+}/*# sourceMappingURL=medium.css.map */

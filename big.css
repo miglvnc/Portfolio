@@ -1,1 +1,21 @@
-/*# sourceMappingURL=big.css.map */
+.headerTitle {
+  font-size: 56px;
+}
+
+.header .title {
+  font-size: 100px;
+}
+.header .subtitle {
+  font-size: 60px;
+}
+
+.projects .techWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+.projects .techSummary {
+  font-size: 30px;
+  padding: 20px;
+}/*# sourceMappingURL=big.css.map */

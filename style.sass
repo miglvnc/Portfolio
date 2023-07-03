@@ -60,7 +60,7 @@ a
     transition: color 0.3s
 
 a:hover
-    color: #6994e4
+    color: gold
 
 // main structure
 
@@ -119,7 +119,7 @@ a:hover
         display: block
         position: absolute
         bottom: 25px
-        font-size: 20px
+        font-size: 35px
         left: 50%
         transform: translate(-50%)
         color: #65a2ff
@@ -145,7 +145,9 @@ a:hover
         flex-direction: column
         justify-content: center
         align-items: center
-        max-width: 600px
+        height: 100%
+        // width: 100%
+        max-width: 700px
 
         .paragraphsWrapper
             margin-bottom: 50px
@@ -157,6 +159,18 @@ a:hover
                 letter-spacing: 1px
                 line-height: 28px
 
+
+    .personalData
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        margin-bottom: 30px
+        padding: 20px 0
+
+        font-size: 16px
+
         .photo
             position: relative
             background-image: url(/imgs/profile2.jpg)
@@ -164,49 +178,64 @@ a:hover
             width: 250px
             height: 250px
             border-radius: 50%
-            box-shadow: 0px 0px 10px grey
+            box-shadow: 0px 0px 10px whitesmoke
             margin-bottom: 15px
             overflow: hidden
             z-index: 1
+            margin: 10px auto 30px
 
             
-    .personalTitle
-        color: whitesmoke
-        text-align: center
-        margin: 0px 0px -45px 0px
-        background-color: #00081a
-        text-transform: uppercase
-        padding: 5px
-        z-index: 10
+        .personalTitle
+            // max-width: 300px
+            color: whitesmoke
+            text-align: center
+            margin: 0px auto -26px auto
+            background-color: #00081a
+            text-transform: uppercase
+            padding: 5px
+            z-index: 10
 
-    .personalData
-        position: relative
-        display: flex
-        flex-direction: column
-        border: 2px solid #d3d3d3
-        border-radius: 10px
-        box-shadow: 2px 2px 5px black
-        background-color: #152d7000
-        margin-top: 25px
-        margin-bottom: 30px
-        padding: 20px 0
-        max-width: 500px
-
-        font-size: 22px
-
-        .wingSidesWrapper
+        .box
             display: flex
-            flex-direction: row
-            justify-content: space-around
+            flex-direction: column
+            border: 2px solid #d3d3d3
+            border-radius: 10px
+            box-shadow: 2px 2px 5px black
+            background-color: #152d7000
+            padding: 20px
+            margin: 5px
 
-            .leftSide, .rightSide
-                padding-left: 10px
-                padding-right: 10px
+
+            .wingSidesWrapper
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+
+                .leftSide, .rightSide
+                    padding-left: 10px
+                    padding-right: 10px
+                    
+                    ul
+                        list-style-type: none
+                        padding: 10px
+                        // width: 100%
+
+                    .titleList
+                        font-weight: bold
+                        text-transform: uppercase
+                        color:#96abd3
+
+                    li
+                        color: whitesmoke
+                        
+
+            .bottomSide
+                padding: 0px 10px
                 
                 ul
                     list-style-type: none
-                    padding: 10px
-                    width: 100%
+                    padding: 0px 10px
+                    // width: 100%
 
                 .titleList
                     font-weight: bold
@@ -215,23 +244,6 @@ a:hover
 
                 li
                     color: whitesmoke
-                    
-
-        .bottomSide
-            padding: 0px 10px
-            
-            ul
-                list-style-type: none
-                padding: 0px 10px
-                width: 100%
-
-            .titleList
-                font-weight: bold
-                text-transform: uppercase
-                color:#96abd3
-
-            li
-                color: whitesmoke
 
 
 .softSkills, .certs
@@ -248,11 +260,13 @@ a:hover
     .skill
         display: block
         text-align: center
-        text-transform: uppercase
         color: whitesmoke
         padding: 20px 5px
         max-width: 465px
         margin: 0 auto
+
+        h3
+            text-transform: uppercase
 
         .skillTitle
             padding: 20px 10px
@@ -283,13 +297,12 @@ a:hover
     z-index: 1
 
     .hero-shadow
-        background-color: rgba(0, 8, 29, 0.801)
+        background-color: rgba(0, 8, 29, 0.85)
 
     .techWrapper
         height: 100%
         width: 100%
         display: flex
-        // flex-wrap: wrap
         flex-direction: column
         justify-content: center
         align-items: stretch
@@ -381,8 +394,8 @@ a:hover
     .certContainer
         display: flex
         flex-direction: column
-        justify-content: center
-        align-items: center
+        justify-content: flex-start
+        align-items: stretch
         max-width: 465px
         margin: 30px auto
 
@@ -455,3 +468,9 @@ a:hover
         border-top: 1px solid whitesmoke
         padding-top: 30px
         margin: 15px 0px
+
+@media screen and ( min-width:  420px)
+
+    .box
+        font-size: 22px
+    

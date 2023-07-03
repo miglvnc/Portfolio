@@ -96,7 +96,7 @@ a {
 }
 
 a:hover {
-  color: #6994e4;
+  color: gold;
 }
 
 .header {
@@ -155,7 +155,7 @@ a:hover {
   display: block;
   position: absolute;
   bottom: 25px;
-  font-size: 20px;
+  font-size: 35px;
   left: 50%;
   transform: translate(-50%);
   color: #65a2ff;
@@ -182,7 +182,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
+  height: 100%;
+  max-width: 700px;
 }
 .aboutMe .descriptionWrapper .paragraphsWrapper {
   margin-bottom: 50px;
@@ -194,77 +195,82 @@ a:hover {
   letter-spacing: 1px;
   line-height: 28px;
 }
-.aboutMe .descriptionWrapper .photo {
+.aboutMe .personalData {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  font-size: 16px;
+}
+.aboutMe .personalData .photo {
   position: relative;
   background-image: url(/imgs/profile2.jpg);
   background-size: cover;
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 10px whitesmoke;
   margin-bottom: 15px;
   overflow: hidden;
   z-index: 1;
+  margin: 10px auto 30px;
 }
-.aboutMe .personalTitle {
+.aboutMe .personalData .personalTitle {
   color: whitesmoke;
   text-align: center;
-  margin: 0px 0px -45px 0px;
+  margin: 0px auto -26px auto;
   background-color: #00081a;
   text-transform: uppercase;
   padding: 5px;
   z-index: 10;
 }
-.aboutMe .personalData {
-  position: relative;
+.aboutMe .personalData .box {
   display: flex;
   flex-direction: column;
   border: 2px solid #d3d3d3;
   border-radius: 10px;
   box-shadow: 2px 2px 5px black;
   background-color: rgba(21, 45, 112, 0);
-  margin-top: 25px;
-  margin-bottom: 30px;
-  padding: 20px 0;
-  max-width: 500px;
-  font-size: 22px;
+  padding: 20px;
+  margin: 5px;
 }
-.aboutMe .personalData .wingSidesWrapper {
+.aboutMe .personalData .box .wingSidesWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.aboutMe .personalData .wingSidesWrapper .leftSide, .aboutMe .personalData .wingSidesWrapper .rightSide {
+.aboutMe .personalData .box .wingSidesWrapper .leftSide, .aboutMe .personalData .box .wingSidesWrapper .rightSide {
   padding-left: 10px;
   padding-right: 10px;
 }
-.aboutMe .personalData .wingSidesWrapper .leftSide ul, .aboutMe .personalData .wingSidesWrapper .rightSide ul {
+.aboutMe .personalData .box .wingSidesWrapper .leftSide ul, .aboutMe .personalData .box .wingSidesWrapper .rightSide ul {
   list-style-type: none;
   padding: 10px;
-  width: 100%;
 }
-.aboutMe .personalData .wingSidesWrapper .leftSide .titleList, .aboutMe .personalData .wingSidesWrapper .rightSide .titleList {
+.aboutMe .personalData .box .wingSidesWrapper .leftSide .titleList, .aboutMe .personalData .box .wingSidesWrapper .rightSide .titleList {
   font-weight: bold;
   text-transform: uppercase;
   color: #96abd3;
 }
-.aboutMe .personalData .wingSidesWrapper .leftSide li, .aboutMe .personalData .wingSidesWrapper .rightSide li {
+.aboutMe .personalData .box .wingSidesWrapper .leftSide li, .aboutMe .personalData .box .wingSidesWrapper .rightSide li {
   color: whitesmoke;
 }
-.aboutMe .personalData .bottomSide {
+.aboutMe .personalData .box .bottomSide {
   padding: 0px 10px;
 }
-.aboutMe .personalData .bottomSide ul {
+.aboutMe .personalData .box .bottomSide ul {
   list-style-type: none;
   padding: 0px 10px;
-  width: 100%;
 }
-.aboutMe .personalData .bottomSide .titleList {
+.aboutMe .personalData .box .bottomSide .titleList {
   font-weight: bold;
   text-transform: uppercase;
   color: #96abd3;
 }
-.aboutMe .personalData .bottomSide li {
+.aboutMe .personalData .box .bottomSide li {
   color: whitesmoke;
 }
 
@@ -282,11 +288,13 @@ a:hover {
 .softSkills .skill, .certs .skill {
   display: block;
   text-align: center;
-  text-transform: uppercase;
   color: whitesmoke;
   padding: 20px 5px;
   max-width: 465px;
   margin: 0 auto;
+}
+.softSkills .skill h3, .certs .skill h3 {
+  text-transform: uppercase;
 }
 .softSkills .skill .skillTitle, .certs .skill .skillTitle {
   padding: 20px 10px;
@@ -318,7 +326,7 @@ a:hover {
   z-index: 1;
 }
 .projects .hero-shadow {
-  background-color: rgba(0, 8, 29, 0.801);
+  background-color: rgba(0, 8, 29, 0.85);
 }
 .projects .techWrapper {
   height: 100%;
@@ -412,8 +420,8 @@ a:hover {
 .certs .certContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
   max-width: 465px;
   margin: 30px auto;
 }
@@ -483,4 +491,10 @@ a:hover {
   border-top: 1px solid whitesmoke;
   padding-top: 30px;
   margin: 15px 0px;
+}
+
+@media screen and (min-width: 420px) {
+  .box {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=style.css.map */

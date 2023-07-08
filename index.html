@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcin Bogucki - portfolio</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,11 +51,16 @@
       <h1 class="title">Bogucki</h1>
       <div class="underline"></div>
       <p class="subtitle">--Software Tester</p>
-      <a href="#aboutMe"><i class="fas fa-chevron-down bouncingArrow"></i></a>
+      <a href="#aboutMe"
+        ><i
+          class="fas fa-chevron-down animate__animated animate__bounce animate__infinite bouncingArrow animate__slow"
+        ></i
+      ></a>
     </header>
     <section class="aboutMe" id="aboutMe">
       <div class="descriptionWrapper">
         <div class="paragraphsWrapper">
+          <div class="animatedHero-shadow toAnimate"></div>
           <h2 class="authorName headerTitle">Who Am I?</h2>
           <div class="underline bl"></div>
           <p class="authorDescription">
@@ -138,8 +148,6 @@
     </section>
     <section id="projects" class="projects">
       <div class="hero-shadow"></div>
-      <!-- <h2 class="headerTitle">STACK</h2> -->
-      <!-- <div class="underline"></div> -->
       <div class="techWrapper">
         <div class="frontend card">
           <h3 class="techTitle">Front-end</h3>
@@ -250,5 +258,7 @@
         <span>@ Marcin Bogucki 2023</span>
       </div>
     </section>
+
+    <script src="/main.js" defer></script>
   </body>
 </html>

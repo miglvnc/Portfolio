@@ -34,7 +34,7 @@ body
 .bl
     margin-bottom: 15px
 
-.hero-shadow
+.hero-shadow, .animatedHero-shadow
     position: absolute
     top: 0
     width: 100%
@@ -93,6 +93,7 @@ a:hover
         background-position: center
         background-size: cover
         background-clip: text
+        background-attachment: fixed
         --webkit-background-clip: text
         color: transparent
         animation: backgroundHeaderColor 2.5s
@@ -123,7 +124,6 @@ a:hover
         left: 50%
         transform: translate(-50%)
         color: #65a2ff
-        animation: bounce 2s infinite
 
 .aboutMe
     position: relative
@@ -280,7 +280,7 @@ a:hover
             padding: 5px 20px 5px 20px
             letter-spacing: 0px
             line-height: 28px
-
+            
 .projects
     position: relative
     padding: 30px 20px
@@ -463,7 +463,6 @@ a:hover
                     .socialIcon
                         font-size: 38px
                 
-
     .copyright
         border-top: 1px solid whitesmoke
         padding-top: 30px

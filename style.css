@@ -67,7 +67,7 @@ body {
   margin-bottom: 15px;
 }
 
-.hero-shadow {
+.hero-shadow, .animatedHero-shadow {
   position: absolute;
   top: 0;
   width: 100%;
@@ -129,6 +129,7 @@ a:hover {
   background-size: cover;
   -webkit-background-clip: text;
           background-clip: text;
+  background-attachment: fixed;
   --webkit-background-clip: text;
   color: transparent;
   animation: backgroundHeaderColor 2.5s;
@@ -159,7 +160,6 @@ a:hover {
   left: 50%;
   transform: translate(-50%);
   color: #65a2ff;
-  animation: bounce 2s infinite;
 }
 
 .aboutMe {

@@ -19,7 +19,8 @@
   max-width: 740px;
   padding: 20px;
 }
-.aboutMe .descriptionWrapper .animatedHero-shadow {
+.aboutMe .descriptionWrapper .paragraphsWrapper .hero-shadow {
+  display: block;
   background-color: rgba(19, 45, 83, 0.3);
   left: 0;
   border-bottom-left-radius: 50px;
@@ -27,10 +28,10 @@
   animation-delay: 0.4s;
   opacity: 0;
 }
-.aboutMe .descriptionWrapper .animate__slideInDown {
+.aboutMe .descriptionWrapper .paragraphsWrapper .animate__slideInDown {
   opacity: 1;
 }
-.aboutMe .descriptionWrapper .personalTitle {
+.aboutMe .descriptionWrapper .paragraphsWrapper .personalTitle {
   font-size: 34px;
 }
 
@@ -44,6 +45,10 @@
 .softSkills .skill, .certs .skill {
   padding: 100px 0;
   margin: 0;
+  transition: 0.3s;
+}
+.softSkills .skillDescription:hover, .certs .skillDescription:hover {
+  transform: scale(1.3);
 }
 
 .footer .wrapper {

@@ -13,14 +13,26 @@ function isElementVisible(element) {
 }
 
 function handleScroll() {
-  let contentElement = document.querySelector(".toAnimate");
+  let contentElement = document.querySelectorAll(".toAnimate");
 
-  if (
-    isElementVisible(contentElement) &&
-    !contentElement.classList.contains("animate__animated")
-  ) {
-    contentElement.classList.add("animate__animated", "animate__slideInDown");
-  }
+  contentElement.forEach((element) => {
+    element.classList.add("animate__animated");
+    if (isElementVisible(element)) {
+      if (element.classList.contains("hero-shadow")) {
+        element.classList.add("animate__slideInDown");
+      } else if (element.classList.contains("photo")) {
+        element.classList.add("photoBlur");
+      } else if (element.classList.contains("skill")) {
+        element.classList.add("animate__zoomIn");
+      } else if (element.classList.contains("frontend")) {
+        element.classList.add("animate__slideInLeft");
+      } else if (element.classList.contains("testing")) {
+        element.classList.add("animate__slideInRight");
+      } else if (element.classList.contains("certContainer")) {
+        element.classList.add("animate__zoomIn");
+      }
+    }
+  });
 }
 
 window.addEventListener("scroll", handleScroll);

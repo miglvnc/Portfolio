@@ -19,19 +19,20 @@
             max-width: 740px
             padding: 20px
 
-        .animatedHero-shadow
-            background-color: rgba(19, 45, 83, 0.3)
-            left: 0
-            border-bottom-left-radius: 50px
-            border-bottom-right-radius: 50px
-            animation-delay: 0.4s
-            opacity: 0
+            .hero-shadow
+                display: block
+                background-color: rgba(19, 45, 83, 0.3)
+                left: 0
+                border-bottom-left-radius: 50px
+                border-bottom-right-radius: 50px
+                animation-delay: 0.4s
+                opacity: 0
 
-        .animate__slideInDown
-            opacity: 1
+            .animate__slideInDown
+                opacity: 1
 
-        .personalTitle
-            font-size: 34px
+            .personalTitle
+                font-size: 34px
 
 .softSkills, .certs
     max-width: none
@@ -43,6 +44,10 @@
     .skill
         padding: 100px 0
         margin: 0
+        transition: .3s
+
+    .skillDescription:hover
+        transform: scale(1.3)
         
 .footer
     .wrapper

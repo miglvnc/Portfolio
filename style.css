@@ -6,14 +6,6 @@
     background-image: url(/imgs/mountain.jpg);
   }
 }
-@keyframes blur {
-  0% {
-    filter: blur(10px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
 * {
   box-sizing: border-box;
   margin: 0;

@@ -94,7 +94,7 @@ a:hover:not(.sportowaKuzniaLink) {
   padding-top: 20px;
   padding-bottom: 40px;
   z-index: 10;
-  background-image: url(/imgs/header.jpg);
+  background-image: url(imgs/header.jpg);
   background-size: cover;
   background-position: 50% 25%;
   background-attachment: fixed;
@@ -109,7 +109,7 @@ a:hover:not(.sportowaKuzniaLink) {
   text-transform: uppercase;
   letter-spacing: 2px;
   white-space: pre-wrap;
-  background-image: url(/imgs/mountain.jpg);
+  background-image: url(imgs/mountain.jpg);
   background-position: center;
   background-size: cover;
   -webkit-background-clip: text;
@@ -195,7 +195,7 @@ a:hover:not(.sportowaKuzniaLink) {
 }
 .aboutMe .personalData .photo {
   position: relative;
-  background-image: url(/imgs/profile2.jpg);
+  background-image: url(imgs/profile2.jpg);
   background-size: cover;
   width: 250px;
   height: 250px;
@@ -310,7 +310,7 @@ a:hover:not(.sportowaKuzniaLink) {
   position: relative;
   padding: 30px 20px;
   background-color: #000c2e;
-  background-image: url(/imgs/projectsbackground.jpg);
+  background-image: url(imgs/projectsbackground.jpg);
   background-size: cover;
   background-position: left;
   background-attachment: fixed;
@@ -368,7 +368,7 @@ a:hover:not(.sportowaKuzniaLink) {
   z-index: 1;
   background: royalblue;
   border-radius: 10px;
-  background-image: url(/imgs/sportowa.gif);
+  background-image: url(imgs/sportowa.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -403,7 +403,7 @@ a:hover:not(.sportowaKuzniaLink) {
   border-radius: 8px;
 }
 .projects .techWrapper .card .testProject {
-  background-image: url(/imgs/sql.gif);
+  background-image: url(imgs/sql.gif);
   background-position: top;
 }
 .projects .techWrapper .card .techDescription {

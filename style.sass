@@ -290,14 +290,7 @@ a:hover:not(.sportowaKuzniaLink)
     .animate__zoomIn
         opacity: 1
 
-    .analytical
-        animation-delay: 0.1s
 
-    .teamwork
-        animation-delay: 0.5s
-
-    .pessimism
-        animation-delay: 0.9s
 
             
 .projects
@@ -329,20 +322,26 @@ a:hover:not(.sportowaKuzniaLink)
         .sportowaKuzniaLink
             text-decoration: none
             color: whitesmoke
+            transition: transform 0.3s
+
+        .sportowaKuzniaLink:hover
+            transform: scale(1.2)
+
+        .sportowaKuzniaLink:hover .techDescription, .sportowaKuzniaLink:hover .techTitle
+            color: gold
 
         .card
             margin-top: 30px
             margin-bottom: 30px
             padding: 10px
-            opacity: 0
-            transition: 1s
-
+            transition: opacity 1s
 
             .techTitle
                 text-align: center
                 padding: 20px 10px 10px 10px
                 font-size: 32px
                 text-transform: uppercase
+                transition: color 0.3s
 
             .projectGif
                 position: relative
@@ -407,6 +406,7 @@ a:hover:not(.sportowaKuzniaLink)
                 background-color: rgba(0, 12, 46, 0.9)
                 border-bottom-left-radius: 10px
                 color: rgb(214, 214, 214)
+                transition: color 0.3s
 
         .testing
             transition-delay: 1s
@@ -432,8 +432,9 @@ a:hover:not(.sportowaKuzniaLink)
         justify-content: flex-start
         align-items: stretch
         max-width: 465px
-        margin: 30px auto
+        margin: 0px auto
         opacity: 0
+        padding: 30px 0
 
         .logo
             height: 100px

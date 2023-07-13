@@ -9,6 +9,9 @@
   font-size: 60px;
 }
 
+.projects .card {
+  opacity: 0;
+}
 .projects .techWrapper {
   display: flex;
   flex-direction: row;

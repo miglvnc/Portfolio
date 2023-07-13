@@ -7,10 +7,12 @@ function isElementVisible(element) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= windowHeight &&
+    rect.bottom <= windowHeight + 200 &&
     rect.right <= windowWidth
   );
 }
+
+console.log(window.innerHeight);
 
 function handleScroll() {
   let contentElement = document.querySelectorAll(".toAnimate");
@@ -24,9 +26,15 @@ function handleScroll() {
         element.classList.add("photoBlur");
       } else if (element.classList.contains("skill")) {
         element.classList.add("animate__zoomIn");
-      } else if (element.classList.contains("frontend")) {
+      } else if (
+        element.classList.contains("frontend") &&
+        window.innerWidth >= 1024
+      ) {
         element.classList.add("animate__slideInLeft");
-      } else if (element.classList.contains("testing")) {
+      } else if (
+        element.classList.contains("testing") &&
+        window.innerWidth >= 1024
+      ) {
         element.classList.add("animate__slideInRight");
       } else if (element.classList.contains("certContainer")) {
         element.classList.add("animate__zoomIn");

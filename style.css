@@ -305,15 +305,6 @@ a:hover:not(.sportowaKuzniaLink) {
 .softSkills .animate__zoomIn, .certs .animate__zoomIn {
   opacity: 1;
 }
-.softSkills .analytical, .certs .analytical {
-  animation-delay: 0.1s;
-}
-.softSkills .teamwork, .certs .teamwork {
-  animation-delay: 0.5s;
-}
-.softSkills .pessimism, .certs .pessimism {
-  animation-delay: 0.9s;
-}
 
 .projects {
   position: relative;
@@ -344,19 +335,26 @@ a:hover:not(.sportowaKuzniaLink) {
 .projects .techWrapper .sportowaKuzniaLink {
   text-decoration: none;
   color: whitesmoke;
+  transition: transform 0.3s;
+}
+.projects .techWrapper .sportowaKuzniaLink:hover {
+  transform: scale(1.2);
+}
+.projects .techWrapper .sportowaKuzniaLink:hover .techDescription, .projects .techWrapper .sportowaKuzniaLink:hover .techTitle {
+  color: gold;
 }
 .projects .techWrapper .card {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 10px;
-  opacity: 0;
-  transition: 1s;
+  transition: opacity 1s;
 }
 .projects .techWrapper .card .techTitle {
   text-align: center;
   padding: 20px 10px 10px 10px;
   font-size: 32px;
   text-transform: uppercase;
+  transition: color 0.3s;
 }
 .projects .techWrapper .card .projectGif {
   position: relative;
@@ -418,6 +416,7 @@ a:hover:not(.sportowaKuzniaLink) {
   background-color: rgba(0, 12, 46, 0.9);
   border-bottom-left-radius: 10px;
   color: rgb(214, 214, 214);
+  transition: color 0.3s;
 }
 .projects .techWrapper .testing {
   transition-delay: 1s;
@@ -444,8 +443,9 @@ a:hover:not(.sportowaKuzniaLink) {
   justify-content: flex-start;
   align-items: stretch;
   max-width: 465px;
-  margin: 30px auto;
+  margin: 0px auto;
   opacity: 0;
+  padding: 30px 0;
 }
 .certs .certContainer .logo {
   height: 100px;

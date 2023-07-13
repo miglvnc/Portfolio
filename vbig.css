@@ -47,8 +47,21 @@
   margin: 0;
   transition: 0.3s;
 }
+.softSkills .analytical, .certs .analytical {
+  animation-delay: 0.1s;
+}
+.softSkills .teamwork, .certs .teamwork {
+  animation-delay: 0.5s;
+}
+.softSkills .pessimism, .certs .pessimism {
+  animation-delay: 0.9s;
+}
 .softSkills .skillDescription:hover, .certs .skillDescription:hover {
   transform: scale(1.3);
+}
+
+.certs .certContainer {
+  padding: 100px 0;
 }
 
 .footer .wrapper {

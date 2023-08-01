@@ -245,7 +245,7 @@ a:hover:not(.sportowaKuzniaLink)
                     color: whitesmoke
 
 
-.softSkills, .certs
+.softSkills
     position: relative
     display: flex
     flex-direction: column
@@ -420,38 +420,69 @@ a:hover:not(.sportowaKuzniaLink)
         text-align: center
         font-size: 20px
 
-.certs
+.certs, .certifications
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-content: center
+    top: 0
+    padding: 20px
+    height: 100%
     background-color: #000d2b
-    color: whitesmoke
 
-    .certContainer
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        align-items: stretch
-        max-width: 465px
-        margin: 0px auto
-        opacity: 0
-        padding: 30px 0
+    .certs
+        color: whitesmoke
 
-        .logo
-            height: 100px
-            margin: 0 auto
+        .certContainer
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: stretch
+            max-width: 465px
+            margin: 0px auto
+            opacity: 0
+            padding: 30px 0
 
-        .certTitle
-            text-align: center
-            padding: 30px 10px 0px 10px
+            .logo
+                height: 100px
+                margin: 0 auto
 
-        .certDesc
-            text-align: center
-            padding: 5px 20px 5px 20px
-            margin: 20px auto 10px
-            letter-spacing: 0px
-            line-height: 28px
+            .certTitle
+                text-align: center
+                padding: 30px 10px 0px 10px
 
-    .animate__zoomIn
-        opacity: 1
+            .certDesc
+                text-align: center
+                padding: 5px 20px 5px 20px
+                margin: 20px auto 10px
+                letter-spacing: 0px
+                line-height: 28px
 
+        .animate__zoomIn
+            opacity: 1
+
+    .bigCerts
+        justify-content: space-evenl
+
+    .bigCert
+        align-self: center
+        min-width: 260px
+        max-width: 400px
+        margin: 80px 0
+        box-shadow: 0 0 30px #00267e
+        cursor: pointer
+        transition: transform 1s
+
+
+    .istqbCert
+        max-width: 600px
+        max-height: 450px
+
+    .bigCert:hover
+        position: relative
+        transform: scale(1.7)
+        z-index: 1000
 
 
 .footer

@@ -246,7 +246,7 @@ a:hover:not(.sportowaKuzniaLink) {
   color: whitesmoke;
 }
 
-.softSkills, .certs {
+.softSkills {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -257,7 +257,7 @@ a:hover:not(.sportowaKuzniaLink) {
   height: 100%;
   background-color: #000a22;
 }
-.softSkills .skill, .certs .skill {
+.softSkills .skill {
   position: relative;
   opacity: 0;
   display: block;
@@ -269,24 +269,24 @@ a:hover:not(.sportowaKuzniaLink) {
   cursor: pointer;
   transition: 1s;
 }
-.softSkills .skill h3, .certs .skill h3 {
+.softSkills .skill h3 {
   text-transform: uppercase;
 }
-.softSkills .skill .skillTitle, .certs .skill .skillTitle {
+.softSkills .skill .skillTitle {
   padding: 20px 10px;
 }
-.softSkills .skill .skillIcon, .certs .skill .skillIcon {
+.softSkills .skill .skillIcon {
   font-size: 75px;
   color: #96abd3;
 }
-.softSkills .skill .skillDescription, .certs .skill .skillDescription {
+.softSkills .skill .skillDescription {
   text-align: center;
   padding: 5px 20px 5px 20px;
   letter-spacing: 0px;
   line-height: 28px;
   transition: 0.3s;
 }
-.softSkills .animate__zoomIn, .certs .animate__zoomIn {
+.softSkills .animate__zoomIn {
   opacity: 1;
 }
 
@@ -417,11 +417,21 @@ a:hover:not(.sportowaKuzniaLink) {
   font-size: 20px;
 }
 
-.certs {
+.certs, .certifications {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  top: 0;
+  padding: 20px;
+  height: 100%;
   background-color: #000d2b;
+}
+.certs .certs, .certifications .certs {
   color: whitesmoke;
 }
-.certs .certContainer {
+.certs .certs .certContainer, .certifications .certs .certContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -431,23 +441,44 @@ a:hover:not(.sportowaKuzniaLink) {
   opacity: 0;
   padding: 30px 0;
 }
-.certs .certContainer .logo {
+.certs .certs .certContainer .logo, .certifications .certs .certContainer .logo {
   height: 100px;
   margin: 0 auto;
 }
-.certs .certContainer .certTitle {
+.certs .certs .certContainer .certTitle, .certifications .certs .certContainer .certTitle {
   text-align: center;
   padding: 30px 10px 0px 10px;
 }
-.certs .certContainer .certDesc {
+.certs .certs .certContainer .certDesc, .certifications .certs .certContainer .certDesc {
   text-align: center;
   padding: 5px 20px 5px 20px;
   margin: 20px auto 10px;
   letter-spacing: 0px;
   line-height: 28px;
 }
-.certs .animate__zoomIn {
+.certs .certs .animate__zoomIn, .certifications .certs .animate__zoomIn {
   opacity: 1;
+}
+.certs .bigCerts, .certifications .bigCerts {
+  justify-content: space-evenl;
+}
+.certs .bigCert, .certifications .bigCert {
+  align-self: center;
+  min-width: 260px;
+  max-width: 400px;
+  margin: 80px 0;
+  box-shadow: 0 0 30px #00267e;
+  cursor: pointer;
+  transition: transform 1s;
+}
+.certs .istqbCert, .certifications .istqbCert {
+  max-width: 600px;
+  max-height: 450px;
+}
+.certs .bigCert:hover, .certifications .bigCert:hover {
+  position: relative;
+  transform: scale(1.7);
+  z-index: 1000;
 }
 
 .footer {
